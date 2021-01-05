@@ -35,12 +35,13 @@ const styles = StyleSheet.create({
 const Button = (props: ButtonProps) => {
     const AnimatedIcon = Animated.createAnimatedComponent(Icon)
     let customStyles = {
-        backgroundColor: props.type == 'primary' ? COLORS.Primary : COLORS.Light,
+        backgroundColor: props.type == 'primary' ? COLORS.Primary : COLORS.ExtraLight,
         color: props.type == 'primary' ? COLORS.Light : COLORS.Primary
     }
     return (
         <Pressable disabled={props.isLoading} style={({ pressed }) => [styles.buttonContainer, { transform: [{ scale: pressed ? .98 : 1 }], backgroundColor: customStyles.backgroundColor, marginBottom: props.marginBottom }]} onPress={props.onPress}>
             <View style={styles.buttonGroup}>
+                {props.icon ? <AnimatedIcon style={{ marginRight: 10 }} name={props.icon} size={22} color={customStyles.color} /> : null}
                 <Text style={[styles.buttonText, { color: customStyles.color }]}>{props.label}</Text>
                 {props.isLoading ? <AnimatedIcon style={{ marginLeft: 5, marginTop: 3 }} name="spinner-2" size={22} color={customStyles.color} /> : null}
             </View>

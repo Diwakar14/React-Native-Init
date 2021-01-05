@@ -1,18 +1,18 @@
-import { StyleSheet } from 'react-native';
-import COLORS from '../../../Constants/Colors';
-import FONTS from '../../../Constants/Fonts';
+import { StyleSheet } from "react-native";
+import COLORS from "../../../Constants/Colors";
+import FONTS from "../../../Constants/Fonts";
 
 export const styles = StyleSheet.create({
     container: {
-        backgroundColor: 'white'
-
+        flex: 1,
+        backgroundColor: 'white',
     },
     content: {
-        marginTop: 30,
-        marginHorizontal: 20,
+        paddingHorizontal: 20,
+        flex: 1,
     },
     header: {
-        marginTop: 20
+        padding: 20
     },
     heading: {
         fontSize: 32,
@@ -25,6 +25,11 @@ export const styles = StyleSheet.create({
         color: COLORS.SubHeading,
         textAlign: 'center',
         fontFamily: FONTS.Primary,
-
+    },
+    footer: {
+        position: 'absolute',
+        bottom: 20,
+        alignSelf: 'center',
+        width: '100%'
     }
 })

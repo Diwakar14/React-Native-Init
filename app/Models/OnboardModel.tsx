@@ -2,7 +2,8 @@ const Onboard = [
     {
         id: 'img-1',
         img: require('../../assets/img/bright-ideas.png'),
-        title: 'Encourage Bright Ideas'
+        title: 'Encourage Bright Ideas',
+        desc: 'We provide creative question and study material to encourage student.'
     },
     // {
     //     id: 'img-2',
@@ -12,12 +13,14 @@ const Onboard = [
     {
         id: 'img-3',
         img: require('../../assets/img/easy-payments.png'),
-        title: 'Easy Payments'
+        title: 'Easy Payments',
+        desc: 'Pay when you feel we worth it using various payment methods.'
     },
     {
         id: 'img-4',
         img: require('../../assets/img/online-education.png'),
-        title: 'Give test online'
+        title: 'Give test online',
+        desc: 'Schedule your test according to your needs and get notified.'
     },
     // {
     //     id: 'img-5',
@@ -27,12 +30,14 @@ const Onboard = [
     {
         id: 'img-6',
         img: require('../../assets/img/team-success.png'),
-        title: 'Our goal you success'
+        title: 'Our goal you success',
+        desc: 'Connect with your teacher and clarify your issues.'
     },
     {
         id: 'img-7',
         img: require('../../assets/img/work-remotely.png'),
-        title: 'Work Remotely'
+        title: 'Work Remotely',
+        desc: 'Give and prepare test from anywhere and any platform of your choice.'
     },
 ];
 

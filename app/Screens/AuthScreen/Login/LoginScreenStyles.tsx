@@ -12,12 +12,13 @@ export const styles = StyleSheet.create({
     content: {
         marginTop: 30,
         marginHorizontal: 20,
+        width: Values.screenWidth - 40
     },
     header: {
         marginTop: 20
     },
     heading: {
-        fontSize: 22,
+        fontSize: 32,
         fontFamily: FONTS.Primary,
         color: COLORS.Heading,
         textAlign: 'center'
@@ -28,5 +29,11 @@ export const styles = StyleSheet.create({
         textAlign: 'center',
         fontFamily: FONTS.Primary,
 
+    },
+    socialLogins: {
+        marginTop: 40,
+        paddingTop: 50,
+        borderTopWidth: 1,
+        borderTopColor: COLORS.Light
     }
 })

@@ -21,15 +21,35 @@ export const styles = StyleSheet.create({
         alignItems: 'center'
     },
     cardsImage: {
-        width: 300,
-        height: 300,
+        width: 200,
+        height: 200,
         resizeMode: 'center'
     },
     cardTextHeading: {
         fontFamily: FONTS.Primary,
-        fontSize: 16,
-        marginVertical: 10,
+        fontSize: 18,
+        marginTop: 10,
+        marginBottom: 5,
         color: COLORS.Primary
+    },
+    cardTextDesc: {
+        fontFamily: FONTS.Primary,
+        fontSize: 14,
+        color: COLORS.SubHeading,
+        textAlign: 'center',
+        paddingHorizontal: 40
+    },
+    dotWrapper: {
+        flexDirection: 'row',
+        justifyContent: 'center',
+
+    },
+    dots: {
+        height: 8,
+        width: 8,
+        backgroundColor: COLORS.Light,
+        borderRadius: 40,
+        marginHorizontal: 5
     },
     footer: {
         position: 'absolute',
