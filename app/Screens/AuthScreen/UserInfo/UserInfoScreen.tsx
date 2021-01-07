@@ -6,9 +6,11 @@ import Button from '../../../Shared/Components/Button';
 import Input from '../../../Shared/Components/Input';
 import { styles } from './UserInfoScreenStyles';
 
-const UserInfoScreen = () => {
+const UserInfoScreen = ({ navigation }: any) => {
     const { control, handleSubmit, errors } = useForm();
-    const onSubmit = (data: any) => console.log(data);
+    const onSubmit = (data: any) => {
+        navigation.navigate('Home');
+    };
 
     return <View style={styles.container}>
         <View style={styles.header}>
