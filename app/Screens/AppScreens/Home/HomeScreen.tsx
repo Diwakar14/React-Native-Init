@@ -24,7 +24,6 @@ const HomeScreen = () => {
             }
 
             <Button label="Show / Hide" type="Secondary" onPress={() => {
-
                 opacity.value = 0
             }} />
         </View>

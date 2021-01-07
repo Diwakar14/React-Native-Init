@@ -14,7 +14,7 @@ const App = () => {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator headerMode="none" initialRouteName="Home">
+      <Stack.Navigator headerMode="none" initialRouteName="Onboard">
         <Stack.Screen name="Onboard" component={OnboardScreen}></Stack.Screen>
         <Stack.Screen name="Login" options={{ cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS }} component={LoginScreen}></Stack.Screen>
         <Stack.Screen name="Register" options={{ cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS }} component={RegisterScreen}></Stack.Screen>
