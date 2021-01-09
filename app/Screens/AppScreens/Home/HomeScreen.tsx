@@ -1,30 +1,25 @@
 import React, { useState } from 'react'
 import { StyleSheet, Text, View } from 'react-native'
-import Animated, { Easing, Extrapolate, interpolate, timing, useAnimatedStyle, useSharedValue, withTiming } from 'react-native-reanimated'
-import Button from '../../../Shared/Components/Button'
+import Animated, { Easing, useAnimatedStyle, useSharedValue, withTiming } from 'react-native-reanimated'
+import Button from '../../../Shared/Components/Button';
 
 const HomeScreen = () => {
     const opacity: any = useSharedValue(1);
     const scale = useSharedValue(1);
 
-    const show = useSharedValue(true);
+    const [show, setShow] = useState(true);
 
     const myStyles = useAnimatedStyle(() => {
         return {
-            opacity: withTiming(opacity.value, { duration: 2000, easing: Easing.ease }),
+            opacity: withTiming(opacity.value, { duration: 2000, easing: Easing.cubic }),
         }
     });
-
     return (
         <View style={styles.container}>
-            {
-                show.value
-                    ? <Animated.View style={[styles.box, myStyles]}></Animated.View>
-                    : null
-            }
+            {show && <Animated.View style={[styles.box, myStyles]}></Animated.View>}
 
             <Button label="Show / Hide" type="Secondary" onPress={() => {
-                opacity.value = 0
+                opacity.value = opacity.value === 0 ? 1 : 0
             }} />
         </View>
     )
