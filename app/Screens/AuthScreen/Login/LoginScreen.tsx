@@ -81,7 +81,7 @@ const LoginScreen = ({ navigation }: any) => {
                         case 1:
                             return <View style={styles.content}>
                                 <Selector data={countries} onSelected={handleSelectedCountry} />
-                                <Input autoFocus={true} limit={10} textAlign="center" placeholder="Enter your phone number" keyboard="numeric" onChangeText={handleTextChange} />
+                                <Input autoFocus={true} limit={10} textAlign="left" placeholder="Enter your phone number" keyboard="numeric" onChangeText={handleTextChange} />
                                 <Button label="Continue" type="primary" onPress={handlePhoneLogin} />
                                 <View style={styles.socialLogins}>
                                     <Button label="Continue with Google" icon="sc-google-plus" type="secondary" marginBottom={10} onPress={() => { }} />

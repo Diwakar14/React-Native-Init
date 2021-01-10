@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
     selectedText: {
         fontFamily: FONTS.Primary,
         fontSize: 16,
-        color: COLORS.Primary
+        color: COLORS.Primary,
     },
     centeredView: {
         flex: 1,

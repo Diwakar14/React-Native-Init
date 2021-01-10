@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Image, StyleSheet, TextInput, View } from 'react-native';
+import { Image, StyleSheet, Text, TextInput, View } from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
 import COLORS from '../../Constants/Colors';
 import FONTS from '../../Constants/Fonts';
@@ -15,7 +15,8 @@ interface InputProps {
     autoFocus?: boolean,
     limit?: number,
     marginBottom?: number,
-    error?: any
+    error?: any,
+    onBlur?: any,
 }
 const styles = StyleSheet.create({
     textInput: {
@@ -44,7 +45,7 @@ const Input = (props: InputProps) => {
         <View style={[styles.inputWrapper, { marginBottom: props.marginBottom ?? 10 }]}>
             <Icon name={props.icon ? props.icon : 'phone'} size={16} color={COLORS.Primary} />
             <TextInput
-                keyboardType={props.keyboard == 'numeric' ? 'decimal-pad' : 'default'}
+                keyboardType={props.keyboard === 'numeric' ? 'decimal-pad' : 'default'}
                 placeholder={props.placeholder}
                 onChangeText={props.onChangeText}
                 maxLength={props.limit ? props.limit : 100}

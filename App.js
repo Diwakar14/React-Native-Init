@@ -14,13 +14,13 @@ const App = () => {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator headerMode="none" initialRouteName="Onboard">
+      <Stack.Navigator headerMode="none" initialRouteName="Onboard" screenOptions={{ cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS }}>
         <Stack.Screen name="Onboard" component={OnboardScreen}></Stack.Screen>
-        <Stack.Screen name="Login" options={{ cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS }} component={LoginScreen}></Stack.Screen>
-        <Stack.Screen name="Register" options={{ cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS }} component={RegisterScreen}></Stack.Screen>
-        <Stack.Screen name="RoleSelect" options={{ cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS }} component={RoleSelectScreen}></Stack.Screen>
-        <Stack.Screen name="UserInfo" options={{ cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS }} component={UserInfoScreen}></Stack.Screen>
-        <Stack.Screen name="Home" options={{ cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS }} component={HomeScreen}></Stack.Screen>
+        <Stack.Screen name="Login" component={LoginScreen}></Stack.Screen>
+        <Stack.Screen name="Register" component={RegisterScreen}></Stack.Screen>
+        <Stack.Screen name="RoleSelect" component={RoleSelectScreen}></Stack.Screen>
+        <Stack.Screen name="UserInfo" component={UserInfoScreen}></Stack.Screen>
+        <Stack.Screen name="Home" component={HomeScreen}></Stack.Screen>
       </Stack.Navigator>
     </NavigationContainer>
   );

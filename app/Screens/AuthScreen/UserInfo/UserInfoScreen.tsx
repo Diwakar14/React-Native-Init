@@ -19,14 +19,13 @@ const UserInfoScreen = ({ navigation }: any) => {
         </View>
         <View style={styles.content}>
             <ScrollView style={{ flex: 1, height: '100%' }} keyboardDismissMode="interactive">
-
                 <Controller
                     control={control}
                     render={({ onChange, onBlur, value }) => (
-                        <Input icon="user" error={errors.firstName} marginBottom={10} textAlign="left" value={value} placeholder="Name" onChangeText={(value: any) => onChange(value)} />
+                        <Input icon="user" onBlur={onBlur} error={errors.firstName} marginBottom={10} textAlign="left" value={value} placeholder="Name" onChangeText={(value: any) => onChange(value)} />
                     )}
                     name="firstName"
-                    rules={{ required: true, pattern: /^[A-Za-z]+$/i }}
+                    rules={{ required: true, pattern: /^[A-Za-z]+$/i, }}
                     defaultValue=""
                 />
                 <Controller
