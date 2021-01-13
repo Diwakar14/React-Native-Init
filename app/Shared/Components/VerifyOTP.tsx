@@ -1,5 +1,5 @@
 import OTPInputView from '@twotalltotems/react-native-otp-input'
-import React, { useCallback, useEffect, useMemo, useState } from 'react'
+import React, { memo, useCallback, useEffect, useMemo, useState } from 'react'
 import { StyleSheet, View } from 'react-native'
 import { Value } from 'react-native-reanimated';
 import COLORS from '../../Constants/Colors';
@@ -85,4 +85,4 @@ const VerifyOTP = (props: VerifyOTPProps) => {
     )
 }
 
-export default VerifyOTP;
+export default memo(VerifyOTP);

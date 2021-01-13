@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { memo } from 'react';
 import { Image, StyleSheet, Text, TextInput, View } from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
 import COLORS from '../../Constants/Colors';
@@ -57,4 +57,4 @@ const Input = (props: InputProps) => {
     )
 }
 
-export default Input;
+export default memo(Input);

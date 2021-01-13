@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { Animated, Pressable, StyleSheet, Text, View } from 'react-native';
 import COLORS from '../../Constants/Colors';
 import FONTS from '../../Constants/Fonts';
@@ -49,4 +49,4 @@ const Button = (props: ButtonProps) => {
     )
 }
 
-export default Button;
+export default memo(Button);

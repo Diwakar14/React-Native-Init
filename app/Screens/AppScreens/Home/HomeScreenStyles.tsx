@@ -6,7 +6,6 @@ export const styles = StyleSheet.create({
         backgroundColor: 'white',
         padding: 20,
         justifyContent: 'center',
-
     },
     box: {
         width: 150,

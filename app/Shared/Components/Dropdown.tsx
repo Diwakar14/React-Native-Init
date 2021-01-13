@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { memo, useEffect, useState } from 'react';
 import { Alert, FlatList, Image, Modal, Pressable, StyleSheet, Text, TextInput, TouchableHighlight, View } from 'react-native';
 import { initialWindowMetrics } from 'react-native-safe-area-context';
 import { SvgUri } from 'react-native-svg';
@@ -163,4 +163,4 @@ const Selector = (props: SelectorProps) => {
 }
 
 
-export default Selector;
+export default memo(Selector);

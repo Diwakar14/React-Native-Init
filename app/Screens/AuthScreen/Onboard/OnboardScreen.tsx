@@ -48,7 +48,6 @@ const OnboardScreen = ({ navigation }: any) => {
                         })
                     }
                 </View>
-
             </View>
 
 
