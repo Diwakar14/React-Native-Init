@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
 const Button = (props: ButtonProps) => {
     const AnimatedIcon = Animated.createAnimatedComponent(Icon)
     let customStyles = {
-        backgroundColor: props.type == 'primary' ? COLORS.Primary : COLORS.ExtraLight,
+        backgroundColor: props.type == 'primary' ? COLORS.Primary : props.type == 'link' ? 'transparent' : COLORS.ExtraLight,
         color: props.type == 'primary' ? COLORS.Light : COLORS.Primary
     }
     return (

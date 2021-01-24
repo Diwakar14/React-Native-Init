@@ -119,7 +119,7 @@ const Selector = (props: SelectorProps) => {
                 isMounted
                     ? <View>
                         <Pressable style={({ pressed }) => [styles.dropdownWrapper, { transform: [{ scale: pressed ? .98 : 1 }] }]} onPress={() => setModalVisible(true)}>
-                            <SvgUri uri={selectedCountry.flag} width={20} height={20} />
+                            {/* <SvgUri uri={selectedCountry.flag} width={20} height={20} /> */}
                             <Text style={styles.selectedText}>{selectedCountry.name}(+{selectedCountry.callingCodes[0]})</Text>
                             <Icon name="chevron-down" size={20} color={COLORS.Primary} />
                         </Pressable>

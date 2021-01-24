@@ -10,6 +10,7 @@ interface InputProps {
     keyboard?: string,
     onChangeText?: any,
     value?: any,
+    type?: string,
     icon?: any,
     textAlign?: any,
     autoFocus?: boolean,
@@ -51,6 +52,7 @@ const Input = (props: InputProps) => {
                 maxLength={props.limit ? props.limit : 100}
                 autoFocus={props.autoFocus}
                 value={props.value}
+                secureTextEntry={props.type == 'password' ? true : false}
                 style={[styles.textInput, { textAlign: props.textAlign }]} />
             {props.error && <Icon name="alert-circle" size={16} color={COLORS.Danger} />}
         </View>
