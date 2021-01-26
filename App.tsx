@@ -9,6 +9,8 @@ import MainStackNavigator from './app/Navigations/MainStackNavigator';
 
 const App = () => {
   const [AuthState, dispatch] = useReducer(AuthReducer, AuthStore) as any;
+
+
   const AuthActions = useMemo(() => (
     {
       AuthData: AuthState as IAuthStore,
